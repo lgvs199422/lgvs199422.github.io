@@ -1,0 +1,26 @@
+//-------------
+//Functions
+//-------------
+@function breakpoint($name) {
+  @return map_get($breakpoints, $name);
+}
+//-------------
+//Colors
+//-------------
+$main-color: #d0bc7a;
+$border-color:#E4E4E4;
+$font-color:#21242e;
+//-------------
+//Breakpoints
+//-------------
+$breakpoints: (
+        xs-start: 0px,
+        xs-end:   575px,
+        sm-start: 576px,
+        sm-end:   767px,
+        md-start: 768px,
+        md-end:   991px,
+        lg-start: 992px,
+        lg-end:   1199px,
+        xl-start: 1200px
+);

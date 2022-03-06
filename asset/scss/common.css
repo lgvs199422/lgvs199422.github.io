@@ -1,0 +1,122 @@
+body {
+  background-color: #ffffff;
+  margin: 0;
+  min-width: 320px;
+  height: 100vh;
+  font-family: "TT Norms", sans-serif;
+  color: #21242e;
+}
+body .wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+body .wrapper header {
+  height: 64px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #E4E4E4;
+}
+body .wrapper header .logo {
+  display: flex;
+  padding: 8px;
+}
+body .wrapper header .menu .menu-list {
+  display: flex;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+body .wrapper header .menu .menu-list li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body .wrapper header .menu .menu-list li a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  margin: 0;
+  padding: 8px;
+  cursor: pointer;
+}
+body .wrapper header .menu .menu-list li a span {
+  font-size: 14px;
+}
+body .wrapper header .menu .menu-list li a svg {
+  height: 8px;
+  width: 16px;
+  max-width: 100%;
+  margin: 2px 0 0 4px;
+}
+body .wrapper header .menu .menu-list li a:hover {
+  color: #d0bc7a;
+  transition-duration: 0.4s;
+}
+body .wrapper header .menu .menu-list li a:hover .arrow-down {
+  stroke: #d0bc7a;
+  transition-duration: 0.4s;
+}
+body .wrapper header .navigation-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body .wrapper header .navigation-block .phone {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #d0bc7a;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+body .wrapper header .navigation-block .phone svg {
+  margin-right: 8px;
+}
+body .wrapper header .navigation-block .phone:hover {
+  color: #21242e;
+  transition-duration: 0.4s;
+}
+body .wrapper header .navigation-block .phone:hover .phone {
+  stroke: #21242e;
+  transition-duration: 0.4s;
+}
+body .wrapper header .navigation-block .actions {
+  display: flex;
+  flex-direction: row;
+  padding: 0 32px;
+}
+body .wrapper header .navigation-block .actions svg {
+  margin: 8px;
+  cursor: pointer;
+}
+body .wrapper header .navigation-block .actions svg:hover .heart, body .wrapper header .navigation-block .actions svg:hover .search, body .wrapper header .navigation-block .actions svg:hover .basket {
+  stroke: #21242e;
+  transition-duration: 0.4s;
+}
+body .wrapper header .navigation-block .actions svg:hover .union {
+  fill: #21242e;
+  transition-duration: 0.4s;
+}
+body .wrapper header .navigation-block .menu-burger:hover {
+  cursor: pointer;
+}
+body .wrapper header .navigation-block .menu-burger:hover .menu-burger-desktop {
+  fill: #d0bc7a;
+  transition-duration: 0.4s;
+}
+body .wrapper main {
+  flex: 1 1 auto;
+}
+
+/*# sourceMappingURL=common.css.map */

@@ -1,0 +1,155 @@
+@import "./variables";
+
+body {
+  background-color: #ffffff;
+  margin: 0;
+  min-width: 320px;
+  height: 100vh;
+  font-family: "TT Norms", sans-serif;
+  color: $font-color;
+
+  .wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    header {
+      height: 64px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid $border-color;
+
+      .logo {
+        display: flex;
+        padding: 8px;
+      }
+
+      .menu {
+        .menu-list {
+          display: flex;
+          text-decoration: none;
+          padding: 0;
+          margin: 0;
+
+          li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            a {
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              text-decoration: none;
+              font-weight: 600;
+              letter-spacing: 1px;
+              white-space: nowrap;
+              margin: 0;
+              padding: 8px;
+              cursor: pointer;
+
+              span {
+                font-size: 14px;
+              }
+
+              svg {
+                height: 8px;
+                width: 16px;
+                max-width: 100%;
+                margin: 2px 0 0 4px;
+
+              }
+
+              &:hover {
+                color: $main-color;
+                transition-duration: .4s;
+
+                .arrow-down {
+                  stroke: $main-color;
+                  transition-duration: .4s;
+                }
+              }
+            }
+
+          }
+        }
+      }
+
+      .navigation-block {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .phone {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          color: $main-color;
+          font-weight: 600;
+          white-space: nowrap;
+          cursor: pointer;
+
+          svg {
+            margin-right: 8px;
+          }
+
+          &:hover {
+            color: $font-color;
+            transition-duration: .4s;
+
+            .phone {
+              stroke: $font-color;
+              transition-duration: .4s;
+            }
+          }
+        }
+
+        .actions {
+          display: flex;
+          flex-direction: row;
+          padding: 0 32px;
+
+          svg {
+            margin: 8px;
+            cursor: pointer;
+
+            &:hover {
+              .heart, .search, .basket {
+                stroke: $font-color;
+                transition-duration: .4s;
+              }
+
+              .union {
+                fill: $font-color;
+                transition-duration: .4s;
+              }
+            }
+          }
+        }
+        .menu-burger{
+          &:hover{
+            cursor: pointer;
+            .menu-burger-desktop{
+              fill: $main-color;
+              transition-duration: .4s;
+            }
+          }
+        }
+      }
+    }
+
+    main {
+      flex: 1 1 auto;
+    }
+
+    footer {
+
+    }
+  }
+}
+

@@ -1,0 +1,27 @@
+@import "./variables";
+
+@media (max-width: breakpoint(xl-start)) and (min-width: breakpoint(xs-start)) {
+  body {
+    .wrapper {
+      header {
+        .navigation-block {
+          .phone {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: breakpoint(md-end)) and (min-width: breakpoint(xs-start)) {
+  body {
+    .wrapper {
+      header {
+        .menu {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
