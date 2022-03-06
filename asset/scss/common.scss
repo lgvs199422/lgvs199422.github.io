@@ -1,12 +1,12 @@
 @import "./variables";
 
 body {
-  background-color: #ffffff;
-  margin: 0;
-  min-width: 320px;
-  height: 100vh;
   font-family: "TT Norms", sans-serif;
   color: $font-color;
+  min-width: 320px;
+  height: 100vh;
+  background-color: #ffffff;
+  margin: 0;
 
   .wrapper {
     min-height: 100%;
@@ -14,11 +14,11 @@ body {
     flex-direction: column;
 
     header {
-      height: 64px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      height: 64px;
       border-bottom: 1px solid $border-color;
 
       .logo {
@@ -45,6 +45,7 @@ body {
               align-items: center;
               text-decoration: none;
               font-weight: 600;
+              color: $font-color;
               letter-spacing: 1px;
               white-space: nowrap;
               margin: 0;
@@ -131,10 +132,12 @@ body {
             }
           }
         }
-        .menu-burger{
-          &:hover{
+
+        .menu-burger {
+          &:hover {
             cursor: pointer;
-            .menu-burger-desktop{
+
+            .menu-burger-desktop {
               fill: $main-color;
               transition-duration: .4s;
             }
