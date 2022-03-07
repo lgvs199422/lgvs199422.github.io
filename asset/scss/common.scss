@@ -1,7 +1,7 @@
 @import "./variables";
 
 body {
-  font-family: "TT Norms", sans-serif;
+  font-family: "TT Norms", sans-serif !important;
   color: $font-color;
   min-width: 320px;
   height: 100vh;
@@ -13,133 +13,86 @@ body {
     display: flex;
     flex-direction: column;
 
-    header {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
+    .header-container {
       height: 64px;
       border-bottom: 1px solid $border-color;
 
-      .logo {
-        display: flex;
-        padding: 8px;
-      }
-
-      .menu {
-        .menu-list {
-          display: flex;
-          text-decoration: none;
-          padding: 0;
-          margin: 0;
-
-          li {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-
-            a {
-              display: flex;
-              flex-direction: row;
-              justify-content: center;
-              align-items: center;
-              text-decoration: none;
-              font-weight: 600;
-              color: $font-color;
-              letter-spacing: 1px;
-              white-space: nowrap;
-              margin: 0;
-              padding: 8px;
-              cursor: pointer;
-
-              span {
-                font-size: 14px;
-              }
-
-              svg {
-                height: 8px;
-                width: 16px;
-                max-width: 100%;
-                margin: 2px 0 0 4px;
-
-              }
-
-              &:hover {
-                color: $main-color;
-                transition-duration: .4s;
-
-                .arrow-down {
-                  stroke: $main-color;
-                  transition-duration: .4s;
-                }
-              }
-            }
-
-          }
-        }
-      }
-
-      .navigation-block {
+      header {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
+        height: 100%;
+        padding: 0 16px;
 
-        .phone {
+
+        .logo {
+          display: flex;
+          padding: 8px 0;
+        }
+
+        .navigation-block {
           display: flex;
           flex-direction: row;
           justify-content: center;
           align-items: center;
-          color: $main-color;
-          font-weight: 600;
-          white-space: nowrap;
-          cursor: pointer;
 
-          svg {
-            margin-right: 8px;
-          }
-
-          &:hover {
-            color: $font-color;
-            transition-duration: .4s;
-
-            .phone {
-              stroke: $font-color;
-              transition-duration: .4s;
-            }
-          }
-        }
-
-        .actions {
-          display: flex;
-          flex-direction: row;
-          padding: 0 32px;
-
-          svg {
-            margin: 8px;
+          .phone {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            color: $main-color;
+            font-weight: 500;
+            white-space: nowrap;
             cursor: pointer;
 
+            svg {
+              margin-right: 8px;
+            }
+
             &:hover {
-              .heart, .search, .basket {
+              color: $font-color;
+              transition-duration: .4s;
+
+              .phone {
                 stroke: $font-color;
                 transition-duration: .4s;
               }
+            }
+          }
 
-              .union {
-                fill: $font-color;
-                transition-duration: .4s;
+          .actions {
+            display: flex;
+            flex-direction: row;
+            padding: 0 32px;
+
+            svg {
+              margin: 8px;
+              cursor: pointer;
+
+              &:hover {
+                .heart, .search, .basket {
+                  stroke: $font-color;
+                  transition-duration: .4s;
+                }
+
+                .union {
+                  fill: $font-color;
+                  transition-duration: .4s;
+                }
               }
             }
           }
-        }
 
-        .menu-burger {
-          &:hover {
-            cursor: pointer;
+          .menu-burger {
+            &:hover {
+              cursor: pointer;
 
-            .menu-burger-desktop {
-              fill: $main-color;
-              transition-duration: .4s;
+              .menu-burger-desktop {
+                fill: $main-color;
+                transition-duration: .4s;
+              }
             }
           }
         }
@@ -148,6 +101,117 @@ body {
 
     main {
       flex: 1 1 auto;
+      padding: 0;
+      .account-container {
+        display: grid;
+        grid-template-columns:auto;
+        grid-auto-rows: auto;
+        grid-template-areas: "account__navigation account__header"
+        "account__navigation account__data"
+        "account__navigation account__password"
+        "account__navigation account__save-changes"
+        "account__slider account__slider";
+
+        .account__header {
+          grid-area: account__header;
+          border-left: 1px solid $border-color;
+          border-bottom: 1px solid $border-color;
+          padding: 104px 440px 64px 104px;
+
+          h1 {
+            font-size: 80px;
+            font-weight: 400;
+            margin: 0;
+          }
+        }
+
+        .account__data {
+          grid-area: account__data;
+          border-left: 1px solid $border-color;
+          border-bottom: 1px solid $border-color;
+          padding: 64px 96px;
+          h3 {
+            font-size: 24px;
+            font-weight: 500;
+            padding-bottom: 32px;
+          }
+        }
+
+        .account__password {
+          grid-area: account__password;
+          border-left: 1px solid $border-color;
+          border-bottom: 1px solid $border-color;
+          padding: 64px 96px;
+          h3 {
+            font-size: 24px;
+            font-weight: 500;
+            padding-bottom: 32px;
+          }
+        }
+
+        .account__save-changes {
+          grid-area: account__save-changes;
+          border-left: 1px solid $border-color;
+          border-bottom: 1px solid $border-color;
+          padding: 64px 96px 80px;
+        }
+
+        .account__slider {
+          grid-area: account__slider;
+          border-bottom: 1px solid $border-color;
+          padding: 104px 16px 0;
+          h2{
+            font-size: 48px;
+            font-weight: 500;
+            span{
+              color: $main-color;
+            }
+          }
+        }
+
+        .account__navigation {
+          grid-area: account__navigation;
+          border-bottom: 1px solid $border-color;
+
+          nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-end;
+            height: 100%;
+            padding: 104px 96px 0 16px;
+
+            .ui-menu-list {
+              flex-direction: column;
+              align-items: flex-start;
+
+              a {
+                padding: 4px;
+                .ui-menu-item__profile {
+                  color: $main-color;
+
+                  &:hover {
+                    color: $font-color;
+                    transition-duration: .4s;
+                  }
+                }
+              }
+            }
+          }
+        }
+        input{
+          font-size: 16px;
+          background-color: $input-color;
+          border: none;
+          max-width: 544px;
+          height: 56px;
+          margin-bottom: 24px;
+        }
+        label{
+          font-size: 16px;
+          color: $label-font-color;
+        }
+      }
     }
 
     footer {

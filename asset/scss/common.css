@@ -1,5 +1,5 @@
 body {
-  font-family: "TT Norms", sans-serif;
+  font-family: "TT Norms", sans-serif !important;
   color: #21242e;
   min-width: 320px;
   height: 100vh;
@@ -11,113 +11,171 @@ body .wrapper {
   display: flex;
   flex-direction: column;
 }
-body .wrapper header {
+body .wrapper .header-container {
+  height: 64px;
+  border-bottom: 1px solid #ebebeb;
+}
+body .wrapper .header-container header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 64px;
-  border-bottom: 1px solid #E4E4E4;
+  height: 100%;
+  padding: 0 16px;
 }
-body .wrapper header .logo {
+body .wrapper .header-container header .logo {
   display: flex;
-  padding: 8px;
+  padding: 8px 0;
 }
-body .wrapper header .menu .menu-list {
-  display: flex;
-  text-decoration: none;
-  padding: 0;
-  margin: 0;
-}
-body .wrapper header .menu .menu-list li {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-body .wrapper header .menu .menu-list li a {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  font-weight: 600;
-  color: #21242e;
-  letter-spacing: 1px;
-  white-space: nowrap;
-  margin: 0;
-  padding: 8px;
-  cursor: pointer;
-}
-body .wrapper header .menu .menu-list li a span {
-  font-size: 14px;
-}
-body .wrapper header .menu .menu-list li a svg {
-  height: 8px;
-  width: 16px;
-  max-width: 100%;
-  margin: 2px 0 0 4px;
-}
-body .wrapper header .menu .menu-list li a:hover {
-  color: #d0bc7a;
-  transition-duration: 0.4s;
-}
-body .wrapper header .menu .menu-list li a:hover .arrow-down {
-  stroke: #d0bc7a;
-  transition-duration: 0.4s;
-}
-body .wrapper header .navigation-block {
+body .wrapper .header-container header .navigation-block {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-body .wrapper header .navigation-block .phone {
+body .wrapper .header-container header .navigation-block .phone {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   color: #d0bc7a;
-  font-weight: 600;
+  font-weight: 500;
   white-space: nowrap;
   cursor: pointer;
 }
-body .wrapper header .navigation-block .phone svg {
+body .wrapper .header-container header .navigation-block .phone svg {
   margin-right: 8px;
 }
-body .wrapper header .navigation-block .phone:hover {
+body .wrapper .header-container header .navigation-block .phone:hover {
   color: #21242e;
   transition-duration: 0.4s;
 }
-body .wrapper header .navigation-block .phone:hover .phone {
+body .wrapper .header-container header .navigation-block .phone:hover .phone {
   stroke: #21242e;
   transition-duration: 0.4s;
 }
-body .wrapper header .navigation-block .actions {
+body .wrapper .header-container header .navigation-block .actions {
   display: flex;
   flex-direction: row;
   padding: 0 32px;
 }
-body .wrapper header .navigation-block .actions svg {
+body .wrapper .header-container header .navigation-block .actions svg {
   margin: 8px;
   cursor: pointer;
 }
-body .wrapper header .navigation-block .actions svg:hover .heart, body .wrapper header .navigation-block .actions svg:hover .search, body .wrapper header .navigation-block .actions svg:hover .basket {
+body .wrapper .header-container header .navigation-block .actions svg:hover .heart, body .wrapper .header-container header .navigation-block .actions svg:hover .search, body .wrapper .header-container header .navigation-block .actions svg:hover .basket {
   stroke: #21242e;
   transition-duration: 0.4s;
 }
-body .wrapper header .navigation-block .actions svg:hover .union {
+body .wrapper .header-container header .navigation-block .actions svg:hover .union {
   fill: #21242e;
   transition-duration: 0.4s;
 }
-body .wrapper header .navigation-block .menu-burger:hover {
+body .wrapper .header-container header .navigation-block .menu-burger:hover {
   cursor: pointer;
 }
-body .wrapper header .navigation-block .menu-burger:hover .menu-burger-desktop {
+body .wrapper .header-container header .navigation-block .menu-burger:hover .menu-burger-desktop {
   fill: #d0bc7a;
   transition-duration: 0.4s;
 }
 body .wrapper main {
   flex: 1 1 auto;
+  padding: 0;
+}
+body .wrapper main .account-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-rows: auto;
+  grid-template-areas: "account__navigation account__header" "account__navigation account__data" "account__navigation account__password" "account__navigation account__save-changes" "account__slider account__slider";
+}
+body .wrapper main .account-container .account__header {
+  grid-area: account__header;
+  border-left: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  padding: 104px 440px 64px 104px;
+}
+body .wrapper main .account-container .account__header h1 {
+  font-size: 80px;
+  font-weight: 400;
+  margin: 0;
+}
+body .wrapper main .account-container .account__data {
+  grid-area: account__data;
+  border-left: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  padding: 64px 96px;
+}
+body .wrapper main .account-container .account__data h3 {
+  font-size: 24px;
+  font-weight: 500;
+  padding-bottom: 32px;
+}
+body .wrapper main .account-container .account__password {
+  grid-area: account__password;
+  border-left: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  padding: 64px 96px;
+}
+body .wrapper main .account-container .account__password h3 {
+  font-size: 24px;
+  font-weight: 500;
+  padding-bottom: 32px;
+}
+body .wrapper main .account-container .account__save-changes {
+  grid-area: account__save-changes;
+  border-left: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  padding: 64px 96px 80px;
+}
+body .wrapper main .account-container .account__slider {
+  grid-area: account__slider;
+  border-bottom: 1px solid #ebebeb;
+  padding: 104px 16px 0;
+}
+body .wrapper main .account-container .account__slider h2 {
+  font-size: 48px;
+  font-weight: 500;
+}
+body .wrapper main .account-container .account__slider h2 span {
+  color: #d0bc7a;
+}
+body .wrapper main .account-container .account__navigation {
+  grid-area: account__navigation;
+  border-bottom: 1px solid #ebebeb;
+}
+body .wrapper main .account-container .account__navigation nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 100%;
+  padding: 104px 96px 0 16px;
+}
+body .wrapper main .account-container .account__navigation nav .ui-menu-list {
+  flex-direction: column;
+  align-items: flex-start;
+}
+body .wrapper main .account-container .account__navigation nav .ui-menu-list a {
+  padding: 4px;
+}
+body .wrapper main .account-container .account__navigation nav .ui-menu-list a .ui-menu-item__profile {
+  color: #d0bc7a;
+}
+body .wrapper main .account-container .account__navigation nav .ui-menu-list a .ui-menu-item__profile:hover {
+  color: #21242e;
+  transition-duration: 0.4s;
+}
+body .wrapper main .account-container input {
+  font-size: 16px;
+  background-color: #f7f7f7;
+  border: none;
+  max-width: 544px;
+  height: 56px;
+  margin-bottom: 24px;
+}
+body .wrapper main .account-container label {
+  font-size: 16px;
+  color: #a6a7ab;
 }
 
 /*# sourceMappingURL=common.css.map */
