@@ -1,57 +1,59 @@
 @import "./variables";
 
-.ui-menu-list {
-  display: flex;
-  text-decoration: none;
-  padding: 0;
-  margin: 0;
-
-  li {
-    list-style: none;
+.ui-menu {
+  .ui-menu-list {
+    display: flex;
+    text-decoration: none;
     padding: 0;
     margin: 0;
 
-    a {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      font-weight: 500;
-      color: $font-color;
-      letter-spacing: 1px;
-      white-space: nowrap;
+    li {
+      list-style: none;
+      padding: 0;
       margin: 0;
-      padding: 8px;
-      cursor: pointer;
 
-      span {
-        font-size: 14px;
-      }
+      a {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-weight: 500;
+        color: $font-color;
+        letter-spacing: 1px;
+        white-space: nowrap;
+        margin: 0;
+        padding: 8px;
+        cursor: pointer;
 
-      svg {
-        height: 8px;
-        width: 16px;
-        max-width: 100%;
-        margin: 2px 0 0 4px;
+        span {
+          font-size: 14px;
+        }
 
-      }
+        svg {
+          height: 8px;
+          width: 16px;
+          max-width: 100%;
+          margin: 2px 0 0 4px;
 
-      &:hover {
-        color: $main-color;
-        transition-duration: .4s;
+        }
 
-        .arrow-down {
-          stroke: $main-color;
+        &:hover {
+          color: $main-color;
           transition-duration: .4s;
+
+          .arrow-down {
+            stroke: $main-color;
+            transition-duration: .4s;
+          }
         }
       }
-    }
 
+    }
   }
 }
 
-.ui-button{
+.ui-button {
   width: 230px;
   height: 56px;
   display: flex;
@@ -65,14 +67,164 @@
   border: none;
   font-size: 16px;
   font-weight: 400;
-  &:hover{
+
+  &:hover {
     background-color: $main-color;
     transition-duration: .4s;
   }
 }
 
+.ui-navigation-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .phone {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: $main-color;
+    font-weight: 500;
+    white-space: nowrap;
+    cursor: pointer;
+
+    svg {
+      margin-right: 8px;
+    }
+
+    &:hover {
+      color: $font-color;
+      transition-duration: .4s;
+
+      .phone {
+        stroke: $font-color;
+        transition-duration: .4s;
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: row;
+    padding: 0 32px;
+
+    svg {
+      margin: 8px;
+      cursor: pointer;
+
+      &:hover {
+        .heart, .search, .basket {
+          stroke: $font-color;
+          transition-duration: .4s;
+        }
+
+        .union {
+          fill: $font-color;
+          transition-duration: .4s;
+        }
+      }
+    }
+  }
+
+  .menu-burger {
+    &:hover {
+      cursor: pointer;
+
+      .menu-burger-desktop {
+        fill: $main-color;
+        transition-duration: .4s;
+      }
+    }
+  }
+}
+
+.ui-account__password {
+  grid-area: account__password;
+  border-left: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+  padding: 64px 96px;
+  input {
+    font-size: 16px;
+    background-color: $input-color;
+    border: none;
+    max-width: 544px;
+    height: 56px;
+
+    &::-webkit-inner-spin-button {
+      display: none;
+    }
+  }
+
+  label {
+    font-size: 16px;
+    color: $label-font-color;
+    cursor: pointer;
+    margin-top: 16px;
+  }
+  h3 {
+    font-size: 24px;
+    font-weight: 500;
+    padding-bottom: 32px;
+  }
+  .account__old-password{
+    position: relative;
+    .crossed-out-eye{
+      display: none;
+    }
+    .eye, .crossed-out-eye{
+      position: absolute;
+      right: 26px;
+      top: 40px;
+
+      &:hover{
+        fill: $input-color;
+        .eye_item, .crossed-out-eye__item{
+          stroke: $font-color;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: breakpoint(xs-end)) and (min-width: breakpoint(xs-start)) {
-  .ui-button{
+  .ui-button {
     width: 100%;
   }
 }
+
+@media (max-width: breakpoint(xl-start)) and (min-width: breakpoint(xs-start)) {
+  body {
+    .wrapper {
+      .header-container {
+        header {
+          .ui-navigation-block {
+            .phone {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: breakpoint(md-end)) and (min-width: breakpoint(xs-start)) {
+  body {
+    .wrapper {
+      .header-container {
+        header {
+          padding: 0 16px;
+
+          .ui-menu {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+

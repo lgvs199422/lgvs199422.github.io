@@ -31,86 +31,19 @@ body {
           padding: 8px 0;
         }
 
-        .navigation-block {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
 
-          .phone {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            color: $main-color;
-            font-weight: 500;
-            white-space: nowrap;
-            cursor: pointer;
-
-            svg {
-              margin-right: 8px;
-            }
-
-            &:hover {
-              color: $font-color;
-              transition-duration: .4s;
-
-              .phone {
-                stroke: $font-color;
-                transition-duration: .4s;
-              }
-            }
-          }
-
-          .actions {
-            display: flex;
-            flex-direction: row;
-            padding: 0 32px;
-
-            svg {
-              margin: 8px;
-              cursor: pointer;
-
-              &:hover {
-                .heart, .search, .basket {
-                  stroke: $font-color;
-                  transition-duration: .4s;
-                }
-
-                .union {
-                  fill: $font-color;
-                  transition-duration: .4s;
-                }
-              }
-            }
-          }
-
-          .menu-burger {
-            &:hover {
-              cursor: pointer;
-
-              .menu-burger-desktop {
-                fill: $main-color;
-                transition-duration: .4s;
-              }
-            }
-          }
-        }
       }
     }
 
     main {
       flex: 1 1 auto;
       padding: 0;
+
       .account-container {
         display: grid;
-        grid-template-columns:auto;
+        grid-template-columns: auto;
         grid-auto-rows: auto;
-        grid-template-areas: "account__navigation account__header"
-        "account__navigation account__data"
-        "account__navigation account__password"
-        "account__navigation account__save-changes"
-        "account__slider account__slider";
+        grid-template-areas: "account__navigation account__header" "account__navigation account__data" "account__navigation account__password" "account__navigation account__save-changes";
 
         .account__header {
           grid-area: account__header;
@@ -130,18 +63,7 @@ body {
           border-left: 1px solid $border-color;
           border-bottom: 1px solid $border-color;
           padding: 64px 96px;
-          h3 {
-            font-size: 24px;
-            font-weight: 500;
-            padding-bottom: 32px;
-          }
-        }
 
-        .account__password {
-          grid-area: account__password;
-          border-left: 1px solid $border-color;
-          border-bottom: 1px solid $border-color;
-          padding: 64px 96px;
           h3 {
             font-size: 24px;
             font-weight: 500;
@@ -154,19 +76,6 @@ body {
           border-left: 1px solid $border-color;
           border-bottom: 1px solid $border-color;
           padding: 64px 96px 80px;
-        }
-
-        .account__slider {
-          grid-area: account__slider;
-          border-bottom: 1px solid $border-color;
-          padding: 104px 16px 0;
-          h2{
-            font-size: 48px;
-            font-weight: 500;
-            span{
-              color: $main-color;
-            }
-          }
         }
 
         .account__navigation {
@@ -187,6 +96,7 @@ body {
 
               a {
                 padding: 4px;
+
                 .ui-menu-item__profile {
                   color: $main-color;
 
@@ -199,23 +109,425 @@ body {
             }
           }
         }
-        input{
+
+        input {
           font-size: 16px;
           background-color: $input-color;
           border: none;
           max-width: 544px;
           height: 56px;
-          margin-bottom: 24px;
+
+          &::-webkit-inner-spin-button {
+            display: none;
+          }
         }
-        label{
+
+        label {
           font-size: 16px;
           color: $label-font-color;
+          cursor: pointer;
+          margin-top: 16px;
         }
       }
     }
 
-    footer {
+    .account__slider {
+      border-bottom: 1px solid $border-color;
+      padding: 104px 16px 104px;
+      display: grid;
+      grid-template-columns: auto;
+      grid-auto-rows: auto;
+      grid-template-areas: "account__slider__header account__slider__header__button" "owl-carousel owl-carousel";
 
+      .account__slider__header {
+        grid-area: account__slider__header;
+        font-size: 48px;
+        font-weight: 500;
+        margin: 0;
+        padding-bottom: 48px;
+        white-space: nowrap;
+
+        span {
+          color: $main-color;
+        }
+      }
+
+      .account__slider__header__button {
+        grid-area: account__slider__header__button;
+        border: none;
+        background-color: white;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 48px;
+        white-space: nowrap;
+        width: 164px;
+        justify-self: flex-end;
+
+        a {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            margin-left: 8px;
+          }
+        }
+      }
+
+
+      .owl-carousel {
+        grid-area: owl-carousel;
+        overflow: hidden;
+
+        .owl-stage-outer {
+          .owl-stage {
+            box-sizing: border-box;
+
+            .owl-item {
+              height: 418px !important;
+              width: 256px !important;
+              background-color: $input-color;
+              border-radius: 8px;
+
+              .owl-item__delivery, .owl-item__sale, .owl-item__stock {
+                position: absolute;
+                left: 24px;
+                top: 24px;
+                background-color: $owl-item-sale-color;
+                font-size: 14px;
+                font-weight: 300;
+                color: white;
+                height: 28px;
+                border-radius: 100px;
+                white-space: nowrap;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 0 12px;
+              }
+
+              img {
+                max-width: 85%;
+                margin: 0 auto;
+              }
+
+              svg {
+                position: absolute;
+                right: 25px;
+                top: 29px;
+                cursor: pointer;
+
+                .owl-item__heart:hover {
+                  fill: $label-font-color;
+                  transition-duration: .4s;
+                }
+
+                .owl-item__heart:active {
+                  fill: $main-color;
+                  transition-duration: .4s;
+                }
+              }
+
+              .owl-item__text {
+                border-top: 12px solid $owl-item-color1;
+              }
+
+              .owl-item__text2 {
+                border-top: 12px solid $owl-item-color2;
+              }
+
+              .owl-item__text, .owl-item__text2 {
+
+                padding: 16px 24px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-self: flex-start;
+
+                .owl-item__header {
+                  font-family: 'PF Regal Display Pro', sans-serif;
+                  font-style: italic;
+                  font-weight: 500;
+                  font-size: 18px;
+                }
+
+                .owl-item__info {
+                  color: $owl-item-info-color;
+                  font-size: 14px;
+                  margin: 2px 0;
+                }
+
+                .owl-item__price, .owl-item__price_2 {
+                  font-family: 'PF Regal Display Pro', sans-serif;
+                  font-style: italic;
+                  font-weight: 500;
+                  font-size: 18px;
+                  margin-top: 8px;
+                }
+
+                .owl-item__price_2 {
+                  padding-left: 16px;
+                  color: $owl-item-price-color;
+                }
+              }
+            }
+          }
+        }
+
+      }
+    }
+
+    footer {
+      background-color: $footer-color;
+
+      .footer-navigation {
+        border-bottom: 1px solid $footer-border-color;
+
+        .footer-navigation__container {
+          color: white;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 64px 16px;
+
+            .footer-navigation__products__header, .footer-navigation__company__header, .footer-navigation__contacts__header {
+              font-size: 24px;
+              margin-bottom: 8px;
+              font-weight: 500;
+              cursor: pointer;
+
+              &:hover {
+                color: $main-color;
+                transition-duration: .4s;
+              }
+            }
+
+            ul {
+              display: flex;
+              flex-direction: column;
+              padding: 0;
+              margin: 0;
+
+              li {
+                list-style: none;
+                margin: 8px 0;
+                font-size: 16px;
+                font-weight: 300;
+                cursor: pointer;
+
+                a {
+                  color: $footer-upper-part-text-color;
+                  text-decoration: none;
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: flex-start;
+                  align-items: center;
+
+                  svg {
+                    margin-right: 8px;
+                    margin-top: 4px;
+                    align-self: flex-start;
+                  }
+
+                  &:hover {
+                    color: $footer-hover-color;
+                    transition-duration: .4s;
+                  }
+                }
+              }
+            }
+
+          .footer-navigation__contacts {
+            ul li a {
+              &:hover {
+                color: $main-color;
+                transition-duration: .4s;
+
+                .phone {
+                  fill: $footer-color;
+                  stroke: $main-color;
+                  transition-duration: .4s;
+                }
+
+                .email, .clock, .location {
+                  fill: $main-color;
+                  transition-duration: .4s;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .social-network {
+        border-bottom: 1px solid $footer-border-color;
+
+        .social-network__container {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: flex-start;
+          font-size: 14px;
+          font-weight: 400;
+          cursor: pointer;
+          padding: 0 16px;
+
+          .social-network__items {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            .social-network__item {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              box-sizing: border-box;
+              width: 32px;
+              height: 32px;
+              border: 1px solid $footer-social-network-border;
+              margin: 26px 8px;
+              border-radius: 100px;
+              background-color: $footer-social-network-background;
+
+              &:hover {
+                border: 1px solid $main-color;
+                transition-duration: .4s;
+              }
+            }
+          }
+          .social-network__text__middle{
+            min-width: 335px;
+          }
+          .social-network__text, .social-network__text__middle {
+            padding: 32px 0;
+            a{
+              text-decoration: none;
+              color: $footer-middle-part-text-color;
+              &:hover {
+                color: $footer-middle-part-hover-color;
+                transition-duration: .4s;
+
+                .credo {
+                  fill: $footer-middle-part-hover-color;
+                  transition-duration: .4s;
+                }
+              }
+            }
+            a svg {
+              margin-left: 8px;
+            }
+          }
+        }
+      }
+
+      .footer-info__container {
+        color: $footer-middle-part-text-color;
+        padding: 32px 16px;
+      }
+    }
+
+
+    .modal-content {
+      .modal-header {
+        border: none;
+      }
+
+      .modal-body {
+        .menu-burger-navigation {
+          .menu-burger-navigation__container {
+            color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 64px 16px;
+
+            .menu-burger__products, .menu-burger__company, .menu-burger__contacts {
+              color: $font-color;
+
+              .menu-burger__products__header, .menu-burger__company__header, .menu-burger__contacts__header {
+                font-size: 24px;
+                margin-bottom: 8px;
+                font-weight: 500;
+                cursor: pointer;
+
+                &:hover {
+                  color: $main-color;
+                  transition-duration: .4s;
+                }
+              }
+
+              ul {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                margin: 0;
+
+                li {
+                  list-style: none;
+                  margin: 8px 0;
+                  font-size: 16px;
+                  font-weight: 300;
+                  cursor: pointer;
+
+                  a {
+                    color: $font-color;
+                    text-decoration: none;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    svg {
+                      margin-right: 8px;
+                      margin-top: 4px;
+                      align-self: flex-start;
+                    }
+
+                    &:hover {
+                      color: $main-color;
+                      transition-duration: .4s;
+                    }
+                  }
+                }
+              }
+            }
+
+            .menu-burger__contacts {
+              ul li a {
+                .phone {
+                  fill: white;
+                  stroke: $font-color;
+                }
+
+                .email, .clock, .location {
+                  fill: $font-color
+                }
+
+                &:hover {
+                  color: $main-color;
+                  transition-duration: .4s;
+
+                  .phone {
+                    fill: white;
+                    stroke: $main-color;
+                    transition-duration: .4s;
+                  }
+
+                  .email, .clock, .location {
+                    fill: $main-color;
+                    transition-duration: .4s;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

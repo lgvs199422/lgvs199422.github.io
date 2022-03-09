@@ -1,0 +1,180 @@
+.ui-menu .ui-menu-list {
+  display: flex;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+.ui-menu .ui-menu-list li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.ui-menu .ui-menu-list li a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 500;
+  color: #21242e;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  margin: 0;
+  padding: 8px;
+  cursor: pointer;
+}
+.ui-menu .ui-menu-list li a span {
+  font-size: 14px;
+}
+.ui-menu .ui-menu-list li a svg {
+  height: 8px;
+  width: 16px;
+  max-width: 100%;
+  margin: 2px 0 0 4px;
+}
+.ui-menu .ui-menu-list li a:hover {
+  color: #d0bc7a;
+  transition-duration: 0.4s;
+}
+.ui-menu .ui-menu-list li a:hover .arrow-down {
+  stroke: #d0bc7a;
+  transition-duration: 0.4s;
+}
+
+.ui-button {
+  width: 230px;
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  background: #21242E;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+}
+.ui-button:hover {
+  background-color: #d0bc7a;
+  transition-duration: 0.4s;
+}
+
+.ui-navigation-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.ui-navigation-block .phone {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #d0bc7a;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.ui-navigation-block .phone svg {
+  margin-right: 8px;
+}
+.ui-navigation-block .phone:hover {
+  color: #21242e;
+  transition-duration: 0.4s;
+}
+.ui-navigation-block .phone:hover .phone {
+  stroke: #21242e;
+  transition-duration: 0.4s;
+}
+.ui-navigation-block .actions {
+  display: flex;
+  flex-direction: row;
+  padding: 0 32px;
+}
+.ui-navigation-block .actions svg {
+  margin: 8px;
+  cursor: pointer;
+}
+.ui-navigation-block .actions svg:hover .heart, .ui-navigation-block .actions svg:hover .search, .ui-navigation-block .actions svg:hover .basket {
+  stroke: #21242e;
+  transition-duration: 0.4s;
+}
+.ui-navigation-block .actions svg:hover .union {
+  fill: #21242e;
+  transition-duration: 0.4s;
+}
+.ui-navigation-block .menu-burger:hover {
+  cursor: pointer;
+}
+.ui-navigation-block .menu-burger:hover .menu-burger-desktop {
+  fill: #d0bc7a;
+  transition-duration: 0.4s;
+}
+
+.ui-account__password {
+  grid-area: account__password;
+  border-left: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  padding: 64px 96px;
+}
+.ui-account__password input {
+  font-size: 16px;
+  background-color: #f7f7f7;
+  border: none;
+  max-width: 544px;
+  height: 56px;
+}
+.ui-account__password input::-webkit-inner-spin-button {
+  display: none;
+}
+.ui-account__password label {
+  font-size: 16px;
+  color: #a6a7ab;
+  cursor: pointer;
+  margin-top: 16px;
+}
+.ui-account__password h3 {
+  font-size: 24px;
+  font-weight: 500;
+  padding-bottom: 32px;
+}
+.ui-account__password .account__old-password {
+  position: relative;
+}
+.ui-account__password .account__old-password .crossed-out-eye {
+  display: none;
+}
+.ui-account__password .account__old-password .eye, .ui-account__password .account__old-password .crossed-out-eye {
+  position: absolute;
+  right: 26px;
+  top: 40px;
+}
+.ui-account__password .account__old-password .eye:hover, .ui-account__password .account__old-password .crossed-out-eye:hover {
+  fill: #f7f7f7;
+}
+.ui-account__password .account__old-password .eye:hover .eye_item, .ui-account__password .account__old-password .eye:hover .crossed-out-eye__item, .ui-account__password .account__old-password .crossed-out-eye:hover .eye_item, .ui-account__password .account__old-password .crossed-out-eye:hover .crossed-out-eye__item {
+  stroke: #21242e;
+}
+
+@media (max-width: 575px) and (min-width: 0px) {
+  .ui-button {
+    width: 100%;
+  }
+}
+@media (max-width: 1200px) and (min-width: 0px) {
+  body .wrapper .header-container header .ui-navigation-block .phone {
+    display: none;
+  }
+}
+@media (max-width: 991px) and (min-width: 0px) {
+  body .wrapper .header-container header {
+    padding: 0 16px;
+  }
+  body .wrapper .header-container header .ui-menu {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=uikit.css.map */

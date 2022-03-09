@@ -1,0 +1,101 @@
+@media (max-width: 1200px) and (min-width: 0px) {
+  body .wrapper main .account-container .account__header {
+    padding: 104px 328px 64px 104px;
+  }
+  body .wrapper main .account-container .account__header h1 {
+    font-size: 64px;
+  }
+}
+@media (max-width: 991px) and (min-width: 0px) {
+  body .wrapper .header-container header {
+    padding: 0 16px;
+  }
+  body .wrapper main .account-container {
+    grid-template-columns: auto;
+    align-items: center;
+    grid-template-areas: "account__navigation" "account__header" "account__data" "account__password" "account__save-changes";
+  }
+  body .wrapper main .account-container .account__navigation {
+    border-bottom: 1px solid #ebebeb;
+    padding: 0 16px;
+  }
+  body .wrapper main .account-container .account__navigation nav {
+    padding: 8px 0;
+  }
+  body .wrapper main .account-container .account__navigation nav .ui-menu-list {
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  body .wrapper main .account-container .account__navigation nav .ui-menu-list .ui-menu-last-child {
+    flex-grow: 1;
+  }
+  body .wrapper main .account-container .account__navigation nav .ui-menu-list .ui-menu-last-child a {
+    justify-content: flex-end;
+  }
+  body .wrapper main .account-container .account__save-changes {
+    border-bottom: none;
+  }
+  body .wrapper main .account-container .account__header {
+    border: none;
+    padding: 32px 16px 0 16px;
+  }
+  body .wrapper main .account-container .account__header h1 {
+    font-size: 35px;
+  }
+  body .wrapper main .account-container .account__data, body .wrapper main .account-container .account__password, body .wrapper main .account-container .account__save-changes {
+    padding: 32px 16px;
+    border-left: none;
+  }
+  body .wrapper main .account__slider {
+    padding: 32px 16px;
+    border-left: none;
+    grid-template-columns: auto;
+    grid-auto-rows: auto;
+    grid-template-areas: "account__slider__header" "owl-carousel" "account__slider__header__button";
+  }
+  body .wrapper main .account__slider .account__slider__header {
+    font-size: 28px;
+    padding-bottom: 40px;
+  }
+  body .wrapper main .account__slider .account__slider__header__button {
+    margin-top: 40px;
+    justify-self: flex-start;
+  }
+  body .wrapper footer .footer-navigation .footer-navigation__container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  body .wrapper footer .footer-navigation .footer-navigation__container:last-child {
+    padding-bottom: 0;
+  }
+  body .wrapper footer .footer-navigation .footer-navigation__container .footer-navigation__products, body .wrapper footer .footer-navigation .footer-navigation__container .footer-navigation__company, body .wrapper footer .footer-navigation .footer-navigation__container .footer-navigation__contacts {
+    padding-bottom: 32px;
+  }
+  body .wrapper footer .social-network .social-network__container {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 16px;
+  }
+  body .wrapper footer .social-network .social-network__container .social-network__text__middle {
+    min-width: auto;
+  }
+  body .wrapper footer .social-network .social-network__container .social-network__items .social-network__item {
+    margin: 8px 0;
+  }
+  body .wrapper footer .social-network .social-network__container .social-network__text {
+    padding: 8px 0;
+  }
+  body .wrapper .modal-dialog {
+    margin: 0;
+  }
+  body .wrapper .modal-dialog .modal-content .modal-body .menu-burger-navigation .menu-burger-navigation__container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 16px;
+  }
+}
+
+/*# sourceMappingURL=common-resize.css.map */

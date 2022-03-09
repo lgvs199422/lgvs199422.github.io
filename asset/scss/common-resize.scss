@@ -3,19 +3,12 @@
 @media (max-width: breakpoint(xl-start)) and (min-width: breakpoint(xs-start)) {
   body {
     .wrapper {
-      .header-container {
-        header {
-          .navigation-block {
-            .phone {
-              display: none;
-            }
-          }
-        }
-      }
 
       main {
         .account-container {
           .account__header {
+            padding: 104px 328px 64px 104px;
+
             h1 {
               font-size: 64px;
             }
@@ -32,9 +25,7 @@
       .header-container {
         header {
           padding: 0 16px;
-          .menu {
-            display: none;
-          }
+
         }
       }
 
@@ -42,30 +33,33 @@
         .account-container {
           grid-template-columns: auto;
           align-items: center;
-          grid-template-areas: "account__navigation"
-          "account__header"
-          "account__data"
-          "account__password"
-          "account__save-changes"
-          "account__slider";
+          grid-template-areas: "account__navigation" "account__header" "account__data" "account__password" "account__save-changes";
+
           .account__navigation {
             border-bottom: 1px solid $border-color;
             padding: 0 16px;
 
             nav {
               padding: 8px 0;
+
               .ui-menu-list {
                 flex-direction: row;
                 justify-content: flex-start;
                 width: 100%;
-                .ui-menu-last-child{
+
+                .ui-menu-last-child {
                   flex-grow: 1;
+
                   a {
                     justify-content: flex-end;
                   }
                 }
               }
             }
+          }
+
+          .account__save-changes {
+            border-bottom: none;
           }
 
           .account__header {
@@ -76,14 +70,84 @@
               font-size: 35px;
             }
           }
-          .account__slider {
-            h2{
-              font-size: 28px;
-            }
-          }
-          .account__data,.account__password, .account__save-changes, .account__slider, {
+
+          .account__data, .account__password, .account__save-changes {
             padding: 32px 16px;
             border-left: none;
+          }
+        }
+
+        .account__slider {
+          padding: 32px 16px;
+          border-left: none;
+          grid-template-columns: auto;
+          grid-auto-rows: auto;
+          grid-template-areas: "account__slider__header" "owl-carousel" "account__slider__header__button";
+
+          .account__slider__header {
+            font-size: 28px;
+            padding-bottom: 40px;
+          }
+
+          .account__slider__header__button {
+            margin-top: 40px;
+            justify-self: flex-start;
+          }
+        }
+      }
+
+      footer {
+        .footer-navigation {
+          .footer-navigation__container {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            &:last-child {
+              padding-bottom: 0;
+            }
+
+            .footer-navigation__products, .footer-navigation__company, .footer-navigation__contacts {
+              padding-bottom: 32px;
+            }
+          }
+        }
+
+        .social-network {
+          .social-network__container {
+            display: flex;
+            flex-direction: column;
+            padding: 32px 16px;
+            .social-network__text__middle{
+              min-width: auto;
+            }
+            .social-network__items {
+
+              .social-network__item {
+                margin: 8px 0;
+              }
+            }
+
+            .social-network__text {
+              padding: 8px 0;
+            }
+          }
+        }
+      }
+
+      .modal-dialog {
+        margin: 0;
+
+        .modal-content {
+          .modal-body {
+            .menu-burger-navigation {
+              .menu-burger-navigation__container {
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding: 0 16px;
+              }
+            }
           }
         }
       }
