@@ -169,6 +169,7 @@
     padding-bottom: 32px;
   }
   .account__old-password{
+    max-width: 544px;
     position: relative;
     .crossed-out-eye{
       display: none;
@@ -176,7 +177,8 @@
     .eye, .crossed-out-eye{
       position: absolute;
       right: 26px;
-      top: 40px;
+      top: 17px;
+      cursor: pointer;
 
       &:hover{
         fill: $input-color;

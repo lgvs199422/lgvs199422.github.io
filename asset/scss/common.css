@@ -137,13 +137,13 @@ body .wrapper .account__slider .account__slider__header__button {
   width: 164px;
   justify-self: flex-end;
 }
-body .wrapper .account__slider .account__slider__header__button a {
+body .wrapper .account__slider .account__slider__header__button span {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-body .wrapper .account__slider .account__slider__header__button a img {
+body .wrapper .account__slider .account__slider__header__button span img {
   margin-left: 8px;
 }
 body .wrapper .account__slider .owl-carousel {

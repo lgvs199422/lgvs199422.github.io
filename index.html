@@ -148,7 +148,6 @@
 					<div class="mb-3 form__item">
 						<label for="exampleInputEmail1" class="form-label">Почта</label>
 						<input type="email" class="form-control form-control-lg" id="exampleInputEmail1"
-						       aria-describedby="emailHelp"
 						       placeholder="example@mail.ru" required>
 						<div class="invalid-feedback">
 							Это обязательное поле
@@ -190,8 +189,10 @@
 				<div class="ui-account__password">
 					<h3>Изменить пароль</h3>
 					<div class="mb-3 form__item">
-						<label for="oldPassword" class="form-label account__old-password">Старый пароль
-							<input type="password" class="form-control form-control-lg ui-input-password" id="oldPassword"
+						<label for="oldPassword" class="form-label ">Старый пароль</label>
+						<div class="account__old-password">
+							<input type="password" class="form-control form-control-lg ui-input-password"
+							       id="oldPassword"
 							       placeholder="Введите старый пароль" size="544" required>
 							<svg class="eye" width="24" height="24" viewBox="0 0 24 24" fill="#f7f7f7"
 							     xmlns="http://www.w3.org/2000/svg">
@@ -211,10 +212,11 @@
 								<path class="crossed-out-eye__item" d="M5 19L19 5" stroke="#A1A3A7" stroke-width="1.5"
 								      stroke-linecap="round" stroke-linejoin="round"/>
 							</svg>
+
 							<div class="invalid-feedback">
 								Это обязательное поле
 							</div>
-						</label>
+						</div>
 					</div>
 					<div class="mb-3 form__item">
 						<label for="newPassword" class="form-label">Новый пароль</label>
@@ -260,9 +262,9 @@
 		<div class="account__slider container-xxl">
 			<h2 class="account__slider__header"><span>ТРЕНДЫ</span> СЕЗОНА</h2>
 			<button class="account__slider__header__button">
-				<a>Перейти в каталог
-					<img src="././images/arrow-right.svg" alt="logo">
-				</a>
+					<span>Перейти в каталог
+						<img src="././images/arrow-right.svg" alt="logo">
+					</span>
 			</button>
 			<div class="owl-carousel owl-theme">
 				<div>
@@ -574,7 +576,7 @@
 						</svg>
 					</div>
 				</div>
-				<span class="social-network__text__middle">
+				<span class="social-network__text">
 					<a href="javascript:void(0);/#" title="Cedro">© Cedro - все права защищены, 2020</a>
 				</span>
 				<span class="social-network__text">
@@ -613,7 +615,7 @@
 			</div>
 		</div>
 	</footer>
-	<div class="modal fade" id="burger-menu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal fade" id="burger-menu" tabindex="-1" aria-hidden="true">
 		<div class="modal-dialog modal-xl">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -788,7 +790,7 @@
 </div>
 <script src="./asset/lib/JQuery/jquery-min.js"></script>
 <script src="./asset/lib/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
-<script src="./asset/lib/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
+<script src="./asset/lib/OwlCarousel2-2.3.4/dist/"></script>
 <script src="./asset/lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="./asset/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="./asset/js/common.js"></script>
